@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace algo_tri
 {
-    public partial class Form1 : Form
+    public partial class FrmTriSelection : Form
     {
-        public Form1()
+        public FrmTriSelection()
         {
             InitializeComponent();
         }

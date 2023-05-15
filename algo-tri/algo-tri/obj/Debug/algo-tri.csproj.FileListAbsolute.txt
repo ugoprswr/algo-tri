@@ -1,0 +1,14 @@
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\bin\Debug\algo-tri.exe.config
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\bin\Debug\algo-tri.exe
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\bin\Debug\algo-tri.pdb
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.csproj.AssemblyReference.cache
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.csproj.SuggestedBindingRedirects.cache
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.MainFrm.resources
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.Properties.Resources.resources
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.csproj.GenerateResource.cache
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.csproj.CoreCompileInputs.cache
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.exe
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.pdb
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.AboutFrm.resources
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmTriBulle.resources
+C:\Users\UGO_PRSWR\Desktop\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmTriInsertion.resources
