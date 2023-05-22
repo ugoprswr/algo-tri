@@ -2,35 +2,26 @@
 
 <div align="center">
 	<h1><img src="https://user-images.githubusercontent.com/71488204/229435036-373a8710-37f2-47c5-aceb-5afc66913b4e.png" width="100"><h1>
-	<h1>Projet 11Cards</h1>
+	<h1>Projet Algo Tri</h1>
 	<h2>Projet EEL</h2>
-	<h3>Product Owner : Mme Mota / Mr Gabrielle</h3>
-	<p>Site de cartes à collectionner sur le thème du foot</p>
+	<h3>Product Owner : Mr Girard</h3>
+	<p>Application d'algorithmes de tri</p>
 </div>
 
-## Auteurs
-***Scrum master*** &rarr; LEO.TRN
-<br>
-***Developpeurs*** &rarr; EMIR.AHMTV, UGO.PRSWR et KEVIN.FLPLM
+***Developpeurs*** &rarr;UGO.PRSWR
 
 ## Contact
 
-Pour plus d'informations sur ce site, contacter le support 11Cards par mail grâce à l'adresse ``` cards11.supp@gmail.com ```
+Pour plus d'informations sur ce site, contacter moi à l'adresse ``` ugo.prswr@eduge.ch ```
 
 ## Table des matières
 1. [Description du projet](#description-du-projet)
-2. [Pages du site](#pages-du-site)
-3. [Base de données](#base-de-données)
+2. [Pages de l'application](#pages-du-site)
 4. [Dépendances du site](#dépendances-du-site)
 5. [Trello](#trello)
 6. [Tests](#tests)
 7. [Cloner le projet](#cloner-le-projet)
-8. [Installer Composer](#installer-composer)
-	1. [Serveur web integré](#serveur-web-integré)
-	2. [Apache2](#apache2)
-10. [Dépendance](#dépendance)
-11. [Lancer le serveur](#lancer-le-serveur)
-
+		
 ## Description du projet
 
 
@@ -66,7 +57,7 @@ Légendes      | 0%            | 0%            | 0%            | 0%            |
 
 <br>
 
-## Pages du site
+## Pages de l'application
 
 Le projet se compose des pages suivants:
 
@@ -77,12 +68,6 @@ Le projet se compose des pages suivants:
 - ``` Détail ``` : Cette page est accessible quand on clique sur une carte possédée dans la collection. Elle permet de voir le nombre d'itération de la carte qu'on possède, mais également de vendre rapidement la carte en échange de quelques crédits, ou encore de mettre la carte sur le marketPlace.
 - ``` Compte ```: Cette page permet de changer les informations de compte ou les préférences du site de l'utilisateur. Il peut uniquement changer son mot de passe s'il n'a pas créé de compte via google.
 - ``` Quêtes ```: Cette page affiche 3 quêtes que l'utilisateur peut compléter afin de récupérer des crédits. Les quêtes se réinitialisent quand le compte à rebours en bas de la page arrive à 0.
-
-## Base de données
-
-Voici le modèle de notre base de données :
-![image](https://user-images.githubusercontent.com/71488267/227929572-40e0cfb0-760d-4e58-a0ce-0c3b2f6d8537.png)
-
 
 ## Dépendances du site
 
@@ -112,92 +97,3 @@ Ensuite, clonez le projet.
 ```
 git clone git@github.com:GH-EE-CFPT-INFO/11Cards.git
 ```
-
-## Installer Composer
-```
-composer install
-```
-Les dépendances du projet sont installées et vous verrez apparaître un dossier ``` vendor ``` ainsi qu'un fichier ``` composer.lock ``` à la racine du projet.
-
-## Dépendance
-
-Ce projet utilise une unique dépendance, un router PHP nommé [simple-php-router](https://github.com/skipperbent/simple-php-router) qui s'occupe de gérer le routing.
-
-## Lancer le serveur
-
-Vous pouvez accéder au site de deux manières : avec le serveur web intégré à PHP, ou avec Apache2
-
-Tout d'abord, pour les deux étapes il faut lancer les serveurs Apache2 et Mysql depuis la racine de WSL :
-```
-cd # Se déplacer dans la racine de WSL
-sudo service apache2 start # Ensuite entrer votre mot de passe
-sudo service mysql start
-```
-
-### Serveur web integré
-
-Ensuite, lancer le serveur web integré à PHP, placez-vous à la racine du projet puis :
-
-```
-cd public # Se déplacer dans le dossier public du projet
-php -S localhost:8080 # Démarrez le serveur, le site est accessible depuis http://localhost:8080
-```
-### Apache2
-
-Pour tester le projet depuis Apache2, il faut d'abord activer le module mod_rewrite d'Apache :
-
-```
-sudo a2enmod rewrite
-sudo service apache2 restart
-```
-
-Il faut ensuite créer un nouveau vhost dans Apache2 :
-
-```
-sudo touch /etc/apache2/sites-available/11Cards.com.conf
-```
-
-Copiez ensuite le contenu ci-dessous dans le fichier nouvellement créé :
-
-```
-<VirtualHost *:80>
-	ServerName 11Cards.com.loc
-
-	ServerAdmin webmaster@localhost
-	DocumentRoot /var/www/html/11Cards/public
-
-	<Directory /var/www/html/11Cards/public>
-	    Options -Indexes +FollowSymLinks
-	    AllowOverride All
-	</Directory>
-
-	ErrorLog ${APACHE_LOG_DIR}/11Cards.com.loc-error.log
-	CustomLog ${APACHE_LOG_DIR}/11Cards.com.loc-access.log combined
-</VirtualHost>
-```
-
-Veillez à adapter le nom du fichier (ici 11Cards.com.conf) de l'url du site (ici 11Cards.com.loc) et du chemin vers le projet (ici /var/www/html/11Cards/public) à vos besoins !
-
-Vérifiez que vous n'avez pas d'erreur de syntaxe :
-
-```
-sudo apache2ctl -t
-```
-
-Avant d'activer le vhost :
-
-```
-sudo a2ensite 11Cards.com.conf
-sudo service apache2 restart
-```
-
-Le vhost est maintenant activé, il reste à rendre disponible l'url depuis Windows :
-
-1. Ouvrez le bloc notes **en mode administrateur** ;
-2. Ouvrez le fichier ```C:\Windows\System32\drivers\etc\hosts``` (le fichier n'a pas d'extension) ;
-3. Copiez les 2 lignes suivantes, en prenant soin de faire correspondre l'url avec celle de votre vhost :
-```
-127.0.0.1       11Cards.com.loc
-::1             11Cards.com.loc
-```
-Votre site est maintenant accessible.
