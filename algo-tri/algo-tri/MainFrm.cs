@@ -93,5 +93,10 @@ namespace algo_tri
             FrmTriInsertion frmTriInsertion = new FrmTriInsertion();
             frmTriInsertion.ShowDialog();
         }
+
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

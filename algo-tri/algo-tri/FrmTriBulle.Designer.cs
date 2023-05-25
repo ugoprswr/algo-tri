@@ -36,6 +36,7 @@
             this.lsbCas = new System.Windows.Forms.ListBox();
             this.lsbVitesse = new System.Windows.Forms.ListBox();
             this.btnTrierTriBulle = new System.Windows.Forms.Button();
+            this.panelElements = new System.Windows.Forms.Panel();
             this.gbTriConfiguration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.txbPseudoCode.Multiline = true;
             this.txbPseudoCode.Name = "txbPseudoCode";
             this.txbPseudoCode.ReadOnly = true;
-            this.txbPseudoCode.Size = new System.Drawing.Size(800, 132);
+            this.txbPseudoCode.Size = new System.Drawing.Size(800, 149);
             this.txbPseudoCode.TabIndex = 0;
             this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -56,7 +57,7 @@
             this.txbCodeTriBulle.Multiline = true;
             this.txbCodeTriBulle.Name = "txbCodeTriBulle";
             this.txbCodeTriBulle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbCodeTriBulle.Size = new System.Drawing.Size(799, 144);
+            this.txbCodeTriBulle.Size = new System.Drawing.Size(799, 173);
             this.txbCodeTriBulle.TabIndex = 1;
             // 
             // label1
@@ -84,9 +85,9 @@
             this.gbTriConfiguration.Controls.Add(this.lsbCas);
             this.gbTriConfiguration.Controls.Add(this.lsbVitesse);
             this.gbTriConfiguration.Controls.Add(this.btnTrierTriBulle);
-            this.gbTriConfiguration.Location = new System.Drawing.Point(204, 346);
+            this.gbTriConfiguration.Location = new System.Drawing.Point(204, 362);
             this.gbTriConfiguration.Name = "gbTriConfiguration";
-            this.gbTriConfiguration.Size = new System.Drawing.Size(800, 70);
+            this.gbTriConfiguration.Size = new System.Drawing.Size(800, 69);
             this.gbTriConfiguration.TabIndex = 4;
             this.gbTriConfiguration.TabStop = false;
             // 
@@ -127,11 +128,19 @@
             this.btnTrierTriBulle.UseVisualStyleBackColor = true;
             this.btnTrierTriBulle.Click += new System.EventHandler(this.btnTrierTriBulle_Click);
             // 
+            // panelElements
+            // 
+            this.panelElements.Location = new System.Drawing.Point(204, 552);
+            this.panelElements.Name = "panelElements";
+            this.panelElements.Size = new System.Drawing.Size(799, 178);
+            this.panelElements.TabIndex = 5;
+            // 
             // FrmTriBulle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 814);
+            this.Controls.Add(this.panelElements);
             this.Controls.Add(this.gbTriConfiguration);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -156,5 +165,6 @@
         private System.Windows.Forms.ListBox lsbVitesse;
         private System.Windows.Forms.Button btnTrierTriBulle;
         private System.Windows.Forms.ListBox lsbCas;
+        private System.Windows.Forms.Panel panelElements;
     }
 }

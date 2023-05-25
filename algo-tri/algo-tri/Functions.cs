@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace algo_tri
 {
+    /// <summary>
+    /// Class Functions
+    /// </summary>
     public class Functions
     {
         /// <summary>
@@ -18,9 +21,11 @@ namespace algo_tri
             if (vitesse == "Lent" && cas == "Le pire des cas")
             {
                 return;
+            } else if (vitesse == "Lent" && cas == "Aléatoire")
+            {
+                return;
             }
         }
-
         /// <summary>
         /// Permet de trier grâce au tri à bulle
         /// </summary>
