@@ -1,7 +1,4 @@
-# algo-tri
-
 <div align="center">
-	<h1><img src="https://user-images.githubusercontent.com/71488204/229435036-373a8710-37f2-47c5-aceb-5afc66913b4e.png" width="100"><h1>
 	<h1>Projet Algo Tri</h1>
 	<h2>Projet EEL</h2>
 	<h3>Product Owner : Mr Girard</h3>
