@@ -40,16 +40,6 @@ Pour consulter le protocole de tests utilisé dans ce projet, veuillez vous rend
 
 Pour suivre l'avancement du projet et voir les tâches à accomplir, veuillez consulter notre tableau Trello disponible [ici](https://trello.com/invite/b/UAnqdrY3/ATTI96c0e22f41a0c4d7399acf91a471ce9442C5C86E/tpi).
 
-## Contributions
-
-Les contributions à ce projet sont les bienvenues ! Si vous souhaitez ajouter de nouveaux algorithmes de tri, améliorer l'interface utilisateur ou corriger des problèmes, n'hésitez pas à soumettre une demande de pull.
-
-## Licence
-
-Ce projet est sous licence [MIT](LICENSE.md). Consultez le fichier de licence pour plus d'informations.
-
----
-
 Nous espérons que ce projet vous aidera à approfondir votre compréhension des algorithmes de tri en C#. Si vous avez des questions ou des suggestions, n'hésitez pas à nous contacter.
 
 **Merci d'utiliser notre application !**
