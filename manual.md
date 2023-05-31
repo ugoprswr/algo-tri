@@ -12,7 +12,7 @@
 6. [Contact et support](#contact-et-support)
 
 ## Introduction <a name="introduction"></a>
-Bienvenue dans le guide d'utilisation de notre application de démonstration des algorithmes de tri en C#. Ce guide vous aidera à comprendre les fonctionnalités de l'application et à tirer le meilleur parti de ses capacités.
+Bienvenue dans le guide d'utilisation de cette application de démonstration des algorithmes de tri en C#. Ce guide vous aidera à comprendre les fonctionnalités de l'application et à tirer le meilleur parti de ses capacités.
 
 ## Installation <a name="installation"></a>
 Avant d'utiliser l'application, veuillez suivre les étapes d'installation suivantes :
@@ -55,10 +55,9 @@ Cette fonctionnalité vous permet d'accéder aux statistiques du tri effectué.
 Si vous rencontrez des problèmes lors de l'utilisation de l'application, voici quelques suggestions pour résoudre les problèmes courants :
 - Assurez-vous d'avoir installé la dernière version du framework .NET sur votre système.
 - Vérifiez que vous avez correctement suivi les étapes d'installation de l'application.
-- Redémarrez votre ordinateur et essayez de relancer l'application.
 - Si les problèmes persistent, contactez notre équipe de support pour obtenir de l'aide.
 
 ## Contact et support <a name="contact-et-support"></a>
-Si vous avez des questions ou besoin d'une assistance supplémentaire, n'hésitez pas à contacter notre équipe de support à l'adresse suivante : [support@example.com](mailto:support@example.com). Nous nous efforcerons de vous répondre dans les plus brefs délais.
+Si vous avez des questions ou besoin d'une assistance supplémentaire, n'hésitez pas à contacter notre équipe de support à l'adresse suivante : [ugoprswr@eduge.ch](mailto:ugoprswr@eduge.ch). Nous nous efforcerons de vous répondre dans les plus brefs délais.
 
 Nous vous remercions d'avoir choisi notre application et nous espérons qu'elle vous aidera à approfondir votre compréhension des algorithmes de tri en C#.
