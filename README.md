@@ -41,7 +41,7 @@ Pour consulter le protocole de tests utilisé dans ce projet, veuillez vous rend
 
 ## Trello
 
-Pour suivre l'avancement du projet et voir les tâches à accomplir, veuillez consulter notre tableau Trello disponible [ici](https://docs.google.com/spreadsheets/d/1pW13QWT0Ghry3YK9j2BnmiW9VIj6bqAVNlHwrzvekDs/edit?usp=sharing).
+Pour suivre l'avancement du projet et voir les tâches à accomplir, veuillez consulter notre tableau Trello disponible [ici](https://trello.com/invite/b/UAnqdrY3/ATTI96c0e22f41a0c4d7399acf91a471ce9442C5C86E/tpi).
 
 ## Contributions
 
