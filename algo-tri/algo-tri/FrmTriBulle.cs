@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+/**
+ * Projet Algo Tri TPI
+ * Preiswerk Ugo
+ * 2023
+ */
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -30,6 +35,10 @@ namespace algo_tri
         private const int delay = 500; // Délai entre chaque itération en millisecondes
 
         private Timer timer;
+        private TextBox sortedTextBox;
+
+        private int[] sortedArray;
+
 
         public FrmTriBulle()
         {
@@ -49,6 +58,7 @@ namespace algo_tri
             txbPseudoCode.Text = "    PROCEDURE tri_bulle ( TABLEAU a[1:n])\r\n    passage ← 0\r\n    REPETER\r\n        permut ← FAUX\r\n        POUR i VARIANT DE 1 A n - 1 - passage FAIRE\r\n            SI a[i] > a[i+1] ALORS\r\n                echanger a[i] ET a[i+1]\r\n                permut ← VRAI\r\n            FIN SI\r\n        FIN POUR\r\n        passage ← passage + 1\r\n    TANT QUE permut = VRAI\r\n";
             txbCodeTriBulle.Text = "void tri_bulle(int[] tableau)\r\n        {\r\n            int passage = 0;\r\n            bool permutation = true;\r\n            int en_cours;\r\n\r\n            while (permutation)\r\n            {\r\n                permutation = false;\r\n                passage++;\r\n                for (en_cours = 0; en_cours < 20 - passage; en_cours++)\r\n                {\r\n                    if (tableau[en_cours] > tableau[en_cours + 1])\r\n                    {\r\n                        permutation = true;\r\n        int temp = tableau[en_cours];\r\n                        tableau[en_cours] = tableau[en_cours + 1];\r\n                        tableau[en_cours + 1] = temp;\r\n                    }\r\n                }\r\n            }\r\n        }";
         }
+
         /// <summary>
         /// Bouton permettant de démarrer le tri
         /// </summary>
@@ -71,14 +81,26 @@ namespace algo_tri
             showSortedButton.Click += ShowSortedButton_Click;
             this.Controls.Add(showSortedButton);
 
+            sortedTextBox = new TextBox();
+            sortedTextBox.Multiline = false; // Affichage en ligne
+            sortedTextBox.ReadOnly = true; // Lecture seule
+            sortedTextBox.Location = new Point(startX, startY + 2 * cellHeight + 3 * startY);
+            sortedTextBox.Width = arraySize * cellWidth;
+            this.Controls.Add(sortedTextBox);
+
+
         }
 
         private void ShowSortedButton_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            Array.Sort(array);
+            // sortedArray = Tri.TriBulle(array);
             currentIndex = -1; // Réinitialise currentIndex pour ne pas mettre en évidence une cellule
             Refresh();
+
+            string sortedNumbers = string.Join(" ", sortedArray); // Concaténation des nombres triés avec un espace comme séparateur
+            sortedTextBox.Text = sortedNumbers; // Affichage des nombres triés dans le TextBox
+
         }
 
 
@@ -86,13 +108,22 @@ namespace algo_tri
         /// <summary>
         /// Création d'un tableau de nombres aléatoires
         /// </summary>
-        private void InitializeArray ()
+        private void InitializeArray()
         {
             Random random = new Random();
             array = new int[arraySize];
+            HashSet<int> generatedNumbers = new HashSet<int>(); // Ensemble pour stocker les chiffres déjà générés
+
             for (int i = 0; i < arraySize; i++)
             {
-                array[i] = random.Next(minValue, maxValue);
+                int randomNumber;
+                do
+                {
+                    randomNumber = random.Next(minValue, maxValue + 1);
+                } while (generatedNumbers.Contains(randomNumber)); // Vérifie si le chiffre a déjà été généré
+
+                generatedNumbers.Add(randomNumber); // Ajoute le chiffre généré à l'ensemble
+                array[i] = randomNumber;
             }
         }
 
@@ -106,44 +137,58 @@ namespace algo_tri
             timer.Tick += Timer_Tick;
         }
 
+        /// <summary>
+        /// Fonction appelée à chaque tick du Timer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if (currentIndex < arraySize - 1) // Cela évite de continuer à trier le tableau une fois qu'il est entièrement trié
+            if (currentIndex < arraySize - 1)
             {
-                for (int i = 0; i < arraySize - currentIndex - 1; i++)
-                {
-                    if (array[i] > array[i + 1])
-                    {
-                        int temp = array[i];
-                        array[i] = array[i + 1];
-                        array[i + 1] = temp;
-                    }
-                }
+                array = Tri.TriBulle(array);
+
                 currentIndex++;
                 Refresh();
             }
             else
             {
                 timer.Stop();
+                sortedArray = array; // Stocker le tableau trié
             }
+            if (currentIndex == arraySize - 1)
+            {
+                timer.Stop();
+                sortedArray = array; // Stocker le tableau trié
+            }
+
         }
 
-        protected override void OnPaint(PaintEventArgs e)
+        /// <summary>
+        /// Elle est appelée chaque fois que la fenêtre doit être redessinée (par exemple, lorsque nous appelons Refresh())
+        /// </summary>
+        /// <param name="e"></param>
+        protected async override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Graphics g = panelElements.CreateGraphics();
 
             for (int i = 0; i < arraySize; i++)
             {
-                int x = startX + 1 * cellWidth;
+
+                // Les coordonnées x et y sont calculées en fonction de l'indice de l'élément dans le tableau et de la taille des cellules
+                int x = startX + i * cellWidth;
                 int y = startY;
 
+                // mettre en évidence la cellule en cours de traitement pendant le tri
                 if (i == currentIndex)
                     g.FillRectangle(Brushes.Red, x, y, cellWidth * i, cellHeight * i);
 
                 g.DrawRectangle(Pens.Black, x, y, cellWidth, cellHeight);
                 g.DrawString(array[i].ToString(), Font, Brushes.Black, x + cellWidth / 2 - 10, y + cellHeight / 2 - 10);
-            }   
+
+                await Task.Delay(delay);
+            }
 
 
         }
