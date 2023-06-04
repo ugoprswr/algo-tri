@@ -30,53 +30,47 @@
         {
             this.txbPseudoCode = new System.Windows.Forms.TextBox();
             this.txbCodeTriBulle = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbTriConfiguration = new System.Windows.Forms.GroupBox();
             this.lsbCas = new System.Windows.Forms.ListBox();
             this.lsbVitesse = new System.Windows.Forms.ListBox();
             this.btnTrierTriBulle = new System.Windows.Forms.Button();
             this.panelElements = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbTriConfiguration.SuspendLayout();
             this.SuspendLayout();
             // 
             // txbPseudoCode
             // 
             this.txbPseudoCode.Enabled = false;
+            this.txbPseudoCode.Font = new System.Drawing.Font("Fira Code", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPseudoCode.Location = new System.Drawing.Point(204, 12);
             this.txbPseudoCode.Multiline = true;
             this.txbPseudoCode.Name = "txbPseudoCode";
             this.txbPseudoCode.ReadOnly = true;
-            this.txbPseudoCode.Size = new System.Drawing.Size(800, 149);
+            this.txbPseudoCode.Size = new System.Drawing.Size(800, 187);
             this.txbPseudoCode.TabIndex = 0;
             this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbCodeTriBulle
             // 
-            this.txbCodeTriBulle.Location = new System.Drawing.Point(204, 167);
+            this.txbCodeTriBulle.BackColor = System.Drawing.SystemColors.Menu;
+            this.txbCodeTriBulle.Enabled = false;
+            this.txbCodeTriBulle.Location = new System.Drawing.Point(204, 205);
             this.txbCodeTriBulle.Multiline = true;
             this.txbCodeTriBulle.Name = "txbCodeTriBulle";
+            this.txbCodeTriBulle.ReadOnly = true;
             this.txbCodeTriBulle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbCodeTriBulle.Size = new System.Drawing.Size(799, 173);
+            this.txbCodeTriBulle.Size = new System.Drawing.Size(799, 200);
             this.txbCodeTriBulle.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Pseudo code : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 166);
+            this.label2.Font = new System.Drawing.Font("Fira Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.Size = new System.Drawing.Size(99, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Code C# : ";
             // 
@@ -85,7 +79,7 @@
             this.gbTriConfiguration.Controls.Add(this.lsbCas);
             this.gbTriConfiguration.Controls.Add(this.lsbVitesse);
             this.gbTriConfiguration.Controls.Add(this.btnTrierTriBulle);
-            this.gbTriConfiguration.Location = new System.Drawing.Point(204, 362);
+            this.gbTriConfiguration.Location = new System.Drawing.Point(204, 437);
             this.gbTriConfiguration.Name = "gbTriConfiguration";
             this.gbTriConfiguration.Size = new System.Drawing.Size(800, 69);
             this.gbTriConfiguration.TabIndex = 4;
@@ -116,6 +110,7 @@
             this.lsbVitesse.Name = "lsbVitesse";
             this.lsbVitesse.Size = new System.Drawing.Size(120, 36);
             this.lsbVitesse.TabIndex = 1;
+            this.lsbVitesse.SelectedIndexChanged += new System.EventHandler(this.lsbVitesse_SelectedIndexChanged);
             // 
             // btnTrierTriBulle
             // 
@@ -130,20 +125,29 @@
             // 
             // panelElements
             // 
-            this.panelElements.Location = new System.Drawing.Point(204, 552);
+            this.panelElements.Location = new System.Drawing.Point(204, 593);
             this.panelElements.Name = "panelElements";
             this.panelElements.Size = new System.Drawing.Size(799, 178);
             this.panelElements.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Pseudo-code";
             // 
             // FrmTriBulle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 814);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelElements);
             this.Controls.Add(this.gbTriConfiguration);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txbCodeTriBulle);
             this.Controls.Add(this.txbPseudoCode);
             this.Name = "FrmTriBulle";
@@ -159,12 +163,12 @@
 
         private System.Windows.Forms.TextBox txbPseudoCode;
         private System.Windows.Forms.TextBox txbCodeTriBulle;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gbTriConfiguration;
         private System.Windows.Forms.ListBox lsbVitesse;
         private System.Windows.Forms.Button btnTrierTriBulle;
         private System.Windows.Forms.ListBox lsbCas;
         private System.Windows.Forms.Panel panelElements;
+        private System.Windows.Forms.Label label1;
     }
 }

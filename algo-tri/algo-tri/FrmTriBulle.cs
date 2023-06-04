@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static algo_tri.Tri;
 
 namespace algo_tri
 {
@@ -35,7 +36,6 @@ namespace algo_tri
         private const int delay = 500; // Délai entre chaque itération en millisecondes
 
         private Timer timer;
-        private TextBox sortedTextBox;
 
         private int[] sortedArray;
 
@@ -45,7 +45,7 @@ namespace algo_tri
             InitializeComponent();
             InitializeArray();
             InitializeTimer();
-            InitializeUI();
+            DoubleBuffered = true;
         }
 
         /// <summary>
@@ -69,41 +69,6 @@ namespace algo_tri
             currentIndex = 0;
             timer.Start(); // On démarre le timer
         }
-
-        /// <summary>
-        /// Initialisation de l'interface utilisateur
-        /// </summary>
-        private void InitializeUI()
-        {
-            Button showSortedButton = new Button();
-            showSortedButton.Text = "Afficher le tableau trié";
-            showSortedButton.Location = new Point(startX + 100, startY + cellHeight + startY);
-            showSortedButton.Click += ShowSortedButton_Click;
-            this.Controls.Add(showSortedButton);
-
-            sortedTextBox = new TextBox();
-            sortedTextBox.Multiline = false; // Affichage en ligne
-            sortedTextBox.ReadOnly = true; // Lecture seule
-            sortedTextBox.Location = new Point(startX, startY + 2 * cellHeight + 3 * startY);
-            sortedTextBox.Width = arraySize * cellWidth;
-            this.Controls.Add(sortedTextBox);
-
-
-        }
-
-        private void ShowSortedButton_Click(object sender, EventArgs e)
-        {
-            timer.Stop();
-            // sortedArray = Tri.TriBulle(array);
-            currentIndex = -1; // Réinitialise currentIndex pour ne pas mettre en évidence une cellule
-            Refresh();
-
-            string sortedNumbers = string.Join(" ", sortedArray); // Concaténation des nombres triés avec un espace comme séparateur
-            sortedTextBox.Text = sortedNumbers; // Affichage des nombres triés dans le TextBox
-
-        }
-
-
 
         /// <summary>
         /// Création d'un tableau de nombres aléatoires
@@ -173,24 +138,37 @@ namespace algo_tri
             base.OnPaint(e);
             Graphics g = panelElements.CreateGraphics();
 
-            for (int i = 0; i < arraySize; i++)
+            int maxValue = array.Max(); // Obtient la valeur maximale dans le tableau
+            int scaleHeight = (panelElements.Height - startY) / maxValue + 2; // Calcul de l'échelle de hauteur
+
+            int index = 0;
+            foreach (int value in array)
             {
+                int height = value * scaleHeight; // Calcule la hauteur proportionnelle à la valeur
 
                 // Les coordonnées x et y sont calculées en fonction de l'indice de l'élément dans le tableau et de la taille des cellules
-                int x = startX + i * cellWidth;
-                int y = startY;
+                int x = startX + index * cellWidth;
+                int y = panelElements.Height - height;
 
                 // mettre en évidence la cellule en cours de traitement pendant le tri
-                if (i == currentIndex)
-                    g.FillRectangle(Brushes.Red, x, y, cellWidth * i, cellHeight * i);
+                if (index == currentIndex)
+                    g.FillRectangle(Brushes.Red, x, y, cellWidth, height);
 
-                g.DrawRectangle(Pens.Black, x, y, cellWidth, cellHeight);
-                g.DrawString(array[i].ToString(), Font, Brushes.Black, x + cellWidth / 2 - 10, y + cellHeight / 2 - 10);
+                g.DrawRectangle(Pens.Black, x, y, cellWidth, height);
+                g.DrawString(value.ToString(), Font, Brushes.Black, x + cellWidth / 2 - 10, y + height / 2 - 10);
 
+                index++;
                 await Task.Delay(delay);
             }
 
 
+        }
+
+
+        private void lsbVitesse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedSpeed = lsbVitesse.SelectedItem.ToString();
+            timer.Interval = GetDelayFromSpeed(selectedSpeed);
         }
     }
 }

@@ -63,6 +63,7 @@
             this.triParInsertionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.triÀPeigneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.triShellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -338,11 +339,24 @@
             this.triShellToolStripMenuItem.Text = "Tri Shell";
             this.triShellToolStripMenuItem.Click += new System.EventHandler(this.triShellToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Fira Code Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(194, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(417, 175);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenue sur l\'application, pour démarrer veuillez sélectionner un type d\'alogri" +
+    "thme dans la section \"Algorithmes\"";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFrm";
@@ -391,6 +405,7 @@
         private System.Windows.Forms.ToolStripMenuItem triÀBulleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem triÀPeigneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem triShellToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }
 

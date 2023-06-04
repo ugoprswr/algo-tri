@@ -10,6 +10,7 @@ namespace algo_tri
     {
 
        
+
         /// <summary>
         /// Méthode de tri à bulle
         /// </summary>
@@ -146,6 +147,18 @@ namespace algo_tri
                 }
 
                 intervalle = intervalle / 3;
+            }
+        }
+        public static int GetDelayFromSpeed(string speed)
+        {
+            switch (speed)
+            {
+                case "Lent":
+                    return 1000; // Délai de 1 seconde (vitesse lente)
+                case "Rapide":
+                    return 200; // Délai de 200 millisecondes (vitesse rapide)
+                default:
+                    return 500; // Délai par défaut de 500 millisecondes
             }
         }
     }
