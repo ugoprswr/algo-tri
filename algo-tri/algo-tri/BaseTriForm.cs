@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Ugo Preiswerk
+ * Projet TPI Algo
+ * 2023
+ */
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -35,6 +40,10 @@ namespace algo_tri
             InitializeTimer();
             DoubleBuffered = true;
         }
+
+        /// <summary>
+        /// Initialiser le tableau de nombres
+        /// </summary>
         protected virtual void InitializeArray()
         {
             Random random = new Random();
@@ -54,6 +63,9 @@ namespace algo_tri
             }
         }
 
+        /// <summary>
+        /// Initialiser le timer
+        /// </summary>
         protected virtual void InitializeTimer()
         {
             timer = new Timer();
@@ -72,12 +84,20 @@ namespace algo_tri
             // Code spécifique au dessin pour chaque formulaire dérivé
         }
 
+        /// <summary>
+        /// Démarrer le timer
+        /// </summary>
         protected void StartTimer()
         {
             currentIndex = 0;
             timer.Start();
         }
 
+        /// <summary>
+        /// Obtenir la vitesse choisi par l'utilisateur
+        /// </summary>
+        /// <param name="speed"></param>
+        /// <returns></returns>
         protected int GetDelayFromSpeed(string speed)
         {
             switch (speed)

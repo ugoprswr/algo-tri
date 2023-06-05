@@ -110,6 +110,9 @@
     <EmbeddedResource Include="FrmTriPeigne.resx">
       <DependentUpon>FrmTriPeigne.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTriSelection.resx">
+      <DependentUpon>FrmTriSelection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>

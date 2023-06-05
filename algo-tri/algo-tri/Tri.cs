@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Ugo Preiswerk
+ * Projet TPI Algo
+ * 2023
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +13,6 @@ namespace algo_tri
 {
     public class Tri
     {
-
-       
-
         /// <summary>
         /// Méthode de tri à bulle
         /// </summary>
@@ -92,7 +94,7 @@ namespace algo_tri
         /// Méthode de tri par sélection
         /// </summary>
         /// <param name="tableau"></param>
-        public static void TriSelection(int[] tableau)
+        public static int[] TriSelection(int[] tableau)
         {
             int n = tableau.Length;
 
@@ -114,13 +116,14 @@ namespace algo_tri
                     tableau[minIndex] = temp;
                 }
             }
+            return tableau;
         }
 
         /// <summary>
         /// Méthode de Tri Shell
         /// </summary>
         /// <param name="tableau"></param>
-        public static void TriShell(int[] tableau)
+        public static int[] TriShell(int[] tableau)
         {
             int n = tableau.Length;
             int intervalle = 1;
@@ -148,6 +151,7 @@ namespace algo_tri
 
                 intervalle = intervalle / 3;
             }
+            return tableau;
         }
         public static int GetDelayFromSpeed(string speed)
         {
