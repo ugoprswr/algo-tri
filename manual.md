@@ -5,9 +5,9 @@
 2. [Installation](#installation)
 3. [Configuration](#configuration)
 4. [Utilisation](#utilisation)
-   - [Fonctionnalité 1](#tri-interactif)
-   - [Fonctionnalité 2](#exploration)
-   - [Fonctionnalité 3](#statistiques)
+   - [Tri interactif](#tri-interactif)
+   - [Exploration](#exploration)
+   - [Statistique](#statistiques)
 5. [Dépannage](#depannage)
 6. [Contact et support](#contact-et-support)
 
