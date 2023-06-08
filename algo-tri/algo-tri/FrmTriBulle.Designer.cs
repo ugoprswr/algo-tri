@@ -28,29 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbPseudoCode = new System.Windows.Forms.TextBox();
             this.txbCodeTriBulle = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCode = new System.Windows.Forms.Label();
             this.gbTriConfiguration = new System.Windows.Forms.GroupBox();
+            this.btnTrierTriBulle = new MaterialSkin.Controls.MaterialButton();
             this.lsbCas = new System.Windows.Forms.ListBox();
             this.lsbVitesse = new System.Windows.Forms.ListBox();
-            this.btnTrierTriBulle = new System.Windows.Forms.Button();
             this.panelElements = new System.Windows.Forms.Panel();
+            this.lblPseudoCode = new System.Windows.Forms.Label();
+            this.txbPseudoCode = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.label1 = new System.Windows.Forms.Label();
             this.gbTriConfiguration.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txbPseudoCode
-            // 
-            this.txbPseudoCode.Enabled = false;
-            this.txbPseudoCode.Font = new System.Drawing.Font("Fira Code", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPseudoCode.Location = new System.Drawing.Point(204, 12);
-            this.txbPseudoCode.Multiline = true;
-            this.txbPseudoCode.Name = "txbPseudoCode";
-            this.txbPseudoCode.ReadOnly = true;
-            this.txbPseudoCode.Size = new System.Drawing.Size(800, 187);
-            this.txbPseudoCode.TabIndex = 0;
-            this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbCodeTriBulle
             // 
@@ -64,26 +53,47 @@
             this.txbCodeTriBulle.Size = new System.Drawing.Size(799, 200);
             this.txbCodeTriBulle.TabIndex = 1;
             // 
-            // label2
+            // lblCode
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Fira Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 295);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Code C# : ";
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.Location = new System.Drawing.Point(40, 295);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(78, 20);
+            this.lblCode.TabIndex = 3;
+            this.lblCode.Text = "Code C# : ";
             // 
             // gbTriConfiguration
             // 
+            this.gbTriConfiguration.Controls.Add(this.btnTrierTriBulle);
             this.gbTriConfiguration.Controls.Add(this.lsbCas);
             this.gbTriConfiguration.Controls.Add(this.lsbVitesse);
-            this.gbTriConfiguration.Controls.Add(this.btnTrierTriBulle);
             this.gbTriConfiguration.Location = new System.Drawing.Point(204, 437);
             this.gbTriConfiguration.Name = "gbTriConfiguration";
-            this.gbTriConfiguration.Size = new System.Drawing.Size(800, 69);
+            this.gbTriConfiguration.Size = new System.Drawing.Size(800, 104);
             this.gbTriConfiguration.TabIndex = 4;
             this.gbTriConfiguration.TabStop = false;
+            // 
+            // btnTrierTriBulle
+            // 
+            this.btnTrierTriBulle.AutoSize = false;
+            this.btnTrierTriBulle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTrierTriBulle.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTrierTriBulle.Depth = 0;
+            this.btnTrierTriBulle.HighEmphasis = true;
+            this.btnTrierTriBulle.Icon = null;
+            this.btnTrierTriBulle.Location = new System.Drawing.Point(451, 33);
+            this.btnTrierTriBulle.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTrierTriBulle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTrierTriBulle.Name = "btnTrierTriBulle";
+            this.btnTrierTriBulle.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTrierTriBulle.Size = new System.Drawing.Size(110, 36);
+            this.btnTrierTriBulle.TabIndex = 8;
+            this.btnTrierTriBulle.Text = "Trier";
+            this.btnTrierTriBulle.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTrierTriBulle.UseAccentColor = false;
+            this.btnTrierTriBulle.UseVisualStyleBackColor = true;
+            this.btnTrierTriBulle.Click += new System.EventHandler(this.btnTrierTriBulle_Click);
             // 
             // lsbCas
             // 
@@ -93,7 +103,7 @@
             this.lsbCas.Items.AddRange(new object[] {
             "Le pire des cas",
             "Aléatoire"});
-            this.lsbCas.Location = new System.Drawing.Point(229, 19);
+            this.lsbCas.Location = new System.Drawing.Point(263, 33);
             this.lsbCas.Name = "lsbCas";
             this.lsbCas.Size = new System.Drawing.Size(120, 36);
             this.lsbCas.TabIndex = 2;
@@ -106,50 +116,77 @@
             this.lsbVitesse.Items.AddRange(new object[] {
             "Lent",
             "Normal"});
-            this.lsbVitesse.Location = new System.Drawing.Point(88, 20);
+            this.lsbVitesse.Location = new System.Drawing.Point(100, 33);
             this.lsbVitesse.Name = "lsbVitesse";
             this.lsbVitesse.Size = new System.Drawing.Size(120, 36);
             this.lsbVitesse.TabIndex = 1;
             this.lsbVitesse.SelectedIndexChanged += new System.EventHandler(this.lsbVitesse_SelectedIndexChanged);
             // 
-            // btnTrierTriBulle
-            // 
-            this.btnTrierTriBulle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrierTriBulle.Location = new System.Drawing.Point(389, 27);
-            this.btnTrierTriBulle.Name = "btnTrierTriBulle";
-            this.btnTrierTriBulle.Size = new System.Drawing.Size(85, 23);
-            this.btnTrierTriBulle.TabIndex = 0;
-            this.btnTrierTriBulle.Text = "Trier";
-            this.btnTrierTriBulle.UseVisualStyleBackColor = true;
-            this.btnTrierTriBulle.Click += new System.EventHandler(this.btnTrierTriBulle_Click);
-            // 
             // panelElements
             // 
+            this.panelElements.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelElements.Location = new System.Drawing.Point(204, 593);
             this.panelElements.Name = "panelElements";
             this.panelElements.Size = new System.Drawing.Size(799, 178);
             this.panelElements.TabIndex = 5;
             // 
+            // lblPseudoCode
+            // 
+            this.lblPseudoCode.AutoSize = true;
+            this.lblPseudoCode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPseudoCode.Location = new System.Drawing.Point(40, 101);
+            this.lblPseudoCode.Name = "lblPseudoCode";
+            this.lblPseudoCode.Size = new System.Drawing.Size(107, 20);
+            this.lblPseudoCode.TabIndex = 6;
+            this.lblPseudoCode.Text = "Pseudo-code :";
+            // 
+            // txbPseudoCode
+            // 
+            this.txbPseudoCode.AnimateReadOnly = false;
+            this.txbPseudoCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txbPseudoCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txbPseudoCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbPseudoCode.Depth = 0;
+            this.txbPseudoCode.HideSelection = true;
+            this.txbPseudoCode.Location = new System.Drawing.Point(204, 12);
+            this.txbPseudoCode.MaxLength = 32767;
+            this.txbPseudoCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txbPseudoCode.Name = "txbPseudoCode";
+            this.txbPseudoCode.PasswordChar = '\0';
+            this.txbPseudoCode.ReadOnly = true;
+            this.txbPseudoCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbPseudoCode.SelectedText = "";
+            this.txbPseudoCode.SelectionLength = 0;
+            this.txbPseudoCode.SelectionStart = 0;
+            this.txbPseudoCode.ShortcutsEnabled = true;
+            this.txbPseudoCode.Size = new System.Drawing.Size(800, 172);
+            this.txbPseudoCode.TabIndex = 8;
+            this.txbPseudoCode.TabStop = false;
+            this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbPseudoCode.UseSystemPasswordChar = false;
+            // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 101);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(201, 558);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Pseudo-code";
+            this.label1.Size = new System.Drawing.Size(194, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ligne de code en cours :";
             // 
             // FrmTriBulle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1184, 814);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbPseudoCode);
+            this.Controls.Add(this.lblPseudoCode);
             this.Controls.Add(this.panelElements);
             this.Controls.Add(this.gbTriConfiguration);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCode);
             this.Controls.Add(this.txbCodeTriBulle);
-            this.Controls.Add(this.txbPseudoCode);
             this.Name = "FrmTriBulle";
             this.Text = "FrmTriBulle";
             this.Load += new System.EventHandler(this.FrmTriBulle_Load);
@@ -160,15 +197,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbPseudoCode;
         private System.Windows.Forms.TextBox txbCodeTriBulle;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.GroupBox gbTriConfiguration;
         private System.Windows.Forms.ListBox lsbVitesse;
-        private System.Windows.Forms.Button btnTrierTriBulle;
         private System.Windows.Forms.ListBox lsbCas;
         private System.Windows.Forms.Panel panelElements;
+        private System.Windows.Forms.Label lblPseudoCode;
+        private MaterialSkin.Controls.MaterialButton btnTrierTriBulle;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 txbPseudoCode;
         private System.Windows.Forms.Label label1;
     }
 }

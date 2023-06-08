@@ -13,32 +13,41 @@ namespace algo_tri
 {
     public class Tri
     {
+
+        public static int ComparisonsCount { get; private set; }
+
+
         /// <summary>
         /// Méthode de tri à bulle
         /// </summary>
         /// <param name="tableau"></param>
-        public static int[] TriBulle(int[] tableau)
+        public static (int[], int) TriBulle(int[] tableau)
         {
             int n = tableau.Length;
             bool permutation;
+            int numberOfSwaps = 0;
             do
             {
                 permutation = false;
                 for (int i = 0; i < n - 1; i++)
                 {
+                    ComparisonsCount++; // Incrémente le compteur de comparaisons
                     if (tableau[i] > tableau[i + 1])
                     {
                         int temp = tableau[i];
                         tableau[i] = tableau[i + 1];
                         tableau[i + 1] = temp;
                         permutation = true;
+                        numberOfSwaps++;
                     }
                 }
                 n--;
             } while (permutation);
 
-            return tableau;
+            return (tableau, numberOfSwaps);
         }
+
+       
 
         /// <summary>
         /// Méthode de tri par insertion

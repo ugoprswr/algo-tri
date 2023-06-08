@@ -33,6 +33,9 @@ namespace algo_tri
 
         protected TextBox txbPseudoCode;
         protected TextBox txbCode;
+        protected TextBox txbChangements;
+
+
 
         public BaseTriForm()
         {
@@ -110,5 +113,7 @@ namespace algo_tri
                     return 500; // Délai par défaut de 500 millisecondes
             }
         }
+
+
     }
 }

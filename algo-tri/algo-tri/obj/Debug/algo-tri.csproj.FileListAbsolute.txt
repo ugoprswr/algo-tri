@@ -59,3 +59,5 @@ C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.cspro
 C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.csproj.CopyComplete
 C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.exe
 C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.pdb
+C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmTriShell.resources
+C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\bin\Debug\MaterialSkin.dll
