@@ -28,44 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.txbCode = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.txbCodePas = new System.Windows.Forms.TextBox();
+            this.lblCodeEnCours = new System.Windows.Forms.Label();
+            this.txbPseudoCode = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.lblPseudoCode = new System.Windows.Forms.Label();
             this.panelElements = new System.Windows.Forms.Panel();
             this.gbTriConfiguration = new System.Windows.Forms.GroupBox();
+            this.btnTrierSelection = new MaterialSkin.Controls.MaterialButton();
             this.lsbCas = new System.Windows.Forms.ListBox();
             this.lsbVitesse = new System.Windows.Forms.ListBox();
-            this.btnTrierSelection = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txbCode = new System.Windows.Forms.TextBox();
-            this.txbPseudoCode = new System.Windows.Forms.TextBox();
+            this.lblCode = new System.Windows.Forms.Label();
             this.gbTriConfiguration.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // txbCode
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Pseudo-code";
+            this.txbCode.AnimateReadOnly = false;
+            this.txbCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txbCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txbCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbCode.Depth = 0;
+            this.txbCode.HideSelection = true;
+            this.txbCode.Location = new System.Drawing.Point(207, 229);
+            this.txbCode.MaxLength = 32767;
+            this.txbCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txbCode.Name = "txbCode";
+            this.txbCode.PasswordChar = '\0';
+            this.txbCode.ReadOnly = true;
+            this.txbCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbCode.SelectedText = "";
+            this.txbCode.SelectionLength = 0;
+            this.txbCode.SelectionStart = 0;
+            this.txbCode.ShortcutsEnabled = true;
+            this.txbCode.Size = new System.Drawing.Size(800, 172);
+            this.txbCode.TabIndex = 18;
+            this.txbCode.TabStop = false;
+            this.txbCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbCode.UseSystemPasswordChar = false;
+            // 
+            // txbCodePas
+            // 
+            this.txbCodePas.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txbCodePas.Location = new System.Drawing.Point(399, 573);
+            this.txbCodePas.Multiline = true;
+            this.txbCodePas.Name = "txbCodePas";
+            this.txbCodePas.Size = new System.Drawing.Size(228, 23);
+            this.txbCodePas.TabIndex = 17;
+            // 
+            // lblCodeEnCours
+            // 
+            this.lblCodeEnCours.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCodeEnCours.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeEnCours.Location = new System.Drawing.Point(205, 574);
+            this.lblCodeEnCours.Name = "lblCodeEnCours";
+            this.lblCodeEnCours.Size = new System.Drawing.Size(194, 22);
+            this.lblCodeEnCours.TabIndex = 11;
+            this.lblCodeEnCours.Text = "Ligne de code en cours :";
+            // 
+            // txbPseudoCode
+            // 
+            this.txbPseudoCode.AnimateReadOnly = false;
+            this.txbPseudoCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txbPseudoCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txbPseudoCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbPseudoCode.Depth = 0;
+            this.txbPseudoCode.HideSelection = true;
+            this.txbPseudoCode.Location = new System.Drawing.Point(208, 28);
+            this.txbPseudoCode.MaxLength = 32767;
+            this.txbPseudoCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txbPseudoCode.Name = "txbPseudoCode";
+            this.txbPseudoCode.PasswordChar = '\0';
+            this.txbPseudoCode.ReadOnly = true;
+            this.txbPseudoCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbPseudoCode.SelectedText = "";
+            this.txbPseudoCode.SelectionLength = 0;
+            this.txbPseudoCode.SelectionStart = 0;
+            this.txbPseudoCode.ShortcutsEnabled = true;
+            this.txbPseudoCode.Size = new System.Drawing.Size(800, 172);
+            this.txbPseudoCode.TabIndex = 16;
+            this.txbPseudoCode.TabStop = false;
+            this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbPseudoCode.UseSystemPasswordChar = false;
+            // 
+            // lblPseudoCode
+            // 
+            this.lblPseudoCode.AutoSize = true;
+            this.lblPseudoCode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPseudoCode.Location = new System.Drawing.Point(44, 117);
+            this.lblPseudoCode.Name = "lblPseudoCode";
+            this.lblPseudoCode.Size = new System.Drawing.Size(107, 20);
+            this.lblPseudoCode.TabIndex = 15;
+            this.lblPseudoCode.Text = "Pseudo-code :";
             // 
             // panelElements
             // 
-            this.panelElements.Location = new System.Drawing.Point(276, 609);
+            this.panelElements.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelElements.Location = new System.Drawing.Point(208, 609);
             this.panelElements.Name = "panelElements";
             this.panelElements.Size = new System.Drawing.Size(799, 178);
-            this.panelElements.TabIndex = 11;
+            this.panelElements.TabIndex = 14;
             // 
             // gbTriConfiguration
             // 
+            this.gbTriConfiguration.Controls.Add(this.btnTrierSelection);
             this.gbTriConfiguration.Controls.Add(this.lsbCas);
             this.gbTriConfiguration.Controls.Add(this.lsbVitesse);
-            this.gbTriConfiguration.Controls.Add(this.btnTrierSelection);
-            this.gbTriConfiguration.Location = new System.Drawing.Point(276, 453);
+            this.gbTriConfiguration.Location = new System.Drawing.Point(208, 453);
             this.gbTriConfiguration.Name = "gbTriConfiguration";
-            this.gbTriConfiguration.Size = new System.Drawing.Size(800, 69);
-            this.gbTriConfiguration.TabIndex = 10;
+            this.gbTriConfiguration.Size = new System.Drawing.Size(800, 104);
+            this.gbTriConfiguration.TabIndex = 13;
             this.gbTriConfiguration.TabStop = false;
+            // 
+            // btnTrierSelection
+            // 
+            this.btnTrierSelection.AutoSize = false;
+            this.btnTrierSelection.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTrierSelection.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTrierSelection.Depth = 0;
+            this.btnTrierSelection.HighEmphasis = true;
+            this.btnTrierSelection.Icon = null;
+            this.btnTrierSelection.Location = new System.Drawing.Point(451, 33);
+            this.btnTrierSelection.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTrierSelection.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTrierSelection.Name = "btnTrierSelection";
+            this.btnTrierSelection.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTrierSelection.Size = new System.Drawing.Size(110, 36);
+            this.btnTrierSelection.TabIndex = 8;
+            this.btnTrierSelection.Text = "Trier";
+            this.btnTrierSelection.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTrierSelection.UseAccentColor = false;
+            this.btnTrierSelection.UseVisualStyleBackColor = true;
+            this.btnTrierSelection.Click += new System.EventHandler(this.btnTrierSelection_Click);
             // 
             // lsbCas
             // 
@@ -75,7 +169,7 @@
             this.lsbCas.Items.AddRange(new object[] {
             "Le pire des cas",
             "Aléatoire"});
-            this.lsbCas.Location = new System.Drawing.Point(229, 19);
+            this.lsbCas.Location = new System.Drawing.Point(263, 33);
             this.lsbCas.Name = "lsbCas";
             this.lsbCas.Size = new System.Drawing.Size(120, 36);
             this.lsbCas.TabIndex = 2;
@@ -88,67 +182,34 @@
             this.lsbVitesse.Items.AddRange(new object[] {
             "Lent",
             "Normal"});
-            this.lsbVitesse.Location = new System.Drawing.Point(88, 20);
+            this.lsbVitesse.Location = new System.Drawing.Point(100, 33);
             this.lsbVitesse.Name = "lsbVitesse";
             this.lsbVitesse.Size = new System.Drawing.Size(120, 36);
             this.lsbVitesse.TabIndex = 1;
             // 
-            // btnTrierSelection
+            // lblCode
             // 
-            this.btnTrierSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrierSelection.Location = new System.Drawing.Point(389, 27);
-            this.btnTrierSelection.Name = "btnTrierSelection";
-            this.btnTrierSelection.Size = new System.Drawing.Size(85, 23);
-            this.btnTrierSelection.TabIndex = 0;
-            this.btnTrierSelection.Text = "Trier";
-            this.btnTrierSelection.UseVisualStyleBackColor = true;
-            this.btnTrierSelection.Click += new System.EventHandler(this.btnTrierSelection_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Fira Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 19);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Code C# : ";
-            // 
-            // txbCode
-            // 
-            this.txbCode.BackColor = System.Drawing.SystemColors.Menu;
-            this.txbCode.Enabled = false;
-            this.txbCode.Location = new System.Drawing.Point(276, 221);
-            this.txbCode.Multiline = true;
-            this.txbCode.Name = "txbCode";
-            this.txbCode.ReadOnly = true;
-            this.txbCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbCode.Size = new System.Drawing.Size(799, 200);
-            this.txbCode.TabIndex = 8;
-            // 
-            // txbPseudoCode
-            // 
-            this.txbPseudoCode.Enabled = false;
-            this.txbPseudoCode.Font = new System.Drawing.Font("Fira Code", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPseudoCode.Location = new System.Drawing.Point(276, 28);
-            this.txbPseudoCode.Multiline = true;
-            this.txbPseudoCode.Name = "txbPseudoCode";
-            this.txbPseudoCode.ReadOnly = true;
-            this.txbPseudoCode.Size = new System.Drawing.Size(800, 187);
-            this.txbPseudoCode.TabIndex = 7;
-            this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.Location = new System.Drawing.Point(44, 311);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(78, 20);
+            this.lblCode.TabIndex = 12;
+            this.lblCode.Text = "Code C# : ";
             // 
             // FrmTriSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 814);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbCode);
+            this.Controls.Add(this.txbCodePas);
+            this.Controls.Add(this.lblCodeEnCours);
+            this.Controls.Add(this.txbPseudoCode);
+            this.Controls.Add(this.lblPseudoCode);
             this.Controls.Add(this.panelElements);
             this.Controls.Add(this.gbTriConfiguration);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbCode);
-            this.Controls.Add(this.txbPseudoCode);
+            this.Controls.Add(this.lblCode);
             this.Name = "FrmTriSelection";
             this.Text = "FrmTriSelection";
             this.Load += new System.EventHandler(this.FrmTriSelection_Load);
@@ -160,14 +221,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 txbCode;
+        private System.Windows.Forms.TextBox txbCodePas;
+        private System.Windows.Forms.Label lblCodeEnCours;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 txbPseudoCode;
+        private System.Windows.Forms.Label lblPseudoCode;
         private System.Windows.Forms.Panel panelElements;
         private System.Windows.Forms.GroupBox gbTriConfiguration;
+        private MaterialSkin.Controls.MaterialButton btnTrierSelection;
         private System.Windows.Forms.ListBox lsbCas;
         private System.Windows.Forms.ListBox lsbVitesse;
-        private System.Windows.Forms.Button btnTrierSelection;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbCode;
-        private System.Windows.Forms.TextBox txbPseudoCode;
+        private System.Windows.Forms.Label lblCode;
     }
 }

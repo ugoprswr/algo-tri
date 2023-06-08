@@ -95,14 +95,11 @@ namespace algo_tri
             frmTriInsertion.ShowDialog();
         }
 
-        private void MainFrm_Load(object sender, EventArgs e)
+        
+        private void algorithmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            FrmAide frmAide = new FrmAide();
+            frmAide.ShowDialog();
         }
     }
 }

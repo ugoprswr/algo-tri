@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbCode = new System.Windows.Forms.TextBox();
             this.lblCode = new System.Windows.Forms.Label();
             this.gbTriConfiguration = new System.Windows.Forms.GroupBox();
             this.btnTrierTriBulle = new MaterialSkin.Controls.MaterialButton();
@@ -39,20 +38,9 @@
             this.txbPseudoCode = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.lblCodeEnCours = new System.Windows.Forms.Label();
             this.txbCodePas = new System.Windows.Forms.TextBox();
+            this.txbCode = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.gbTriConfiguration.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txbCode
-            // 
-            this.txbCode.BackColor = System.Drawing.SystemColors.Menu;
-            this.txbCode.Enabled = false;
-            this.txbCode.Location = new System.Drawing.Point(204, 205);
-            this.txbCode.Multiline = true;
-            this.txbCode.Name = "txbCode";
-            this.txbCode.ReadOnly = true;
-            this.txbCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbCode.Size = new System.Drawing.Size(799, 200);
-            this.txbCode.TabIndex = 1;
             // 
             // lblCode
             // 
@@ -185,12 +173,38 @@
             this.txbCodePas.Size = new System.Drawing.Size(228, 23);
             this.txbCodePas.TabIndex = 9;
             // 
+            // txbCode
+            // 
+            this.txbCode.AnimateReadOnly = false;
+            this.txbCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txbCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txbCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbCode.Depth = 0;
+            this.txbCode.HideSelection = true;
+            this.txbCode.Location = new System.Drawing.Point(203, 213);
+            this.txbCode.MaxLength = 32767;
+            this.txbCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txbCode.Name = "txbCode";
+            this.txbCode.PasswordChar = '\0';
+            this.txbCode.ReadOnly = true;
+            this.txbCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbCode.SelectedText = "";
+            this.txbCode.SelectionLength = 0;
+            this.txbCode.SelectionStart = 0;
+            this.txbCode.ShortcutsEnabled = true;
+            this.txbCode.Size = new System.Drawing.Size(800, 172);
+            this.txbCode.TabIndex = 10;
+            this.txbCode.TabStop = false;
+            this.txbCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbCode.UseSystemPasswordChar = false;
+            // 
             // FrmTriBulle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1184, 814);
+            this.Controls.Add(this.txbCode);
             this.Controls.Add(this.txbCodePas);
             this.Controls.Add(this.lblCodeEnCours);
             this.Controls.Add(this.txbPseudoCode);
@@ -198,7 +212,6 @@
             this.Controls.Add(this.panelElements);
             this.Controls.Add(this.gbTriConfiguration);
             this.Controls.Add(this.lblCode);
-            this.Controls.Add(this.txbCode);
             this.Name = "FrmTriBulle";
             this.Text = "FrmTriBulle";
             this.Load += new System.EventHandler(this.FrmTriBulle_Load);
@@ -209,7 +222,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txbCode;
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.GroupBox gbTriConfiguration;
         private System.Windows.Forms.ListBox lsbVitesse;
@@ -220,5 +232,6 @@
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 txbPseudoCode;
         private System.Windows.Forms.Label lblCodeEnCours;
         private System.Windows.Forms.TextBox txbCodePas;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 txbCode;
     }
 }

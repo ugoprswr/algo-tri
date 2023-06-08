@@ -64,6 +64,7 @@
             this.triÀPeigneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.triShellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.algorithmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             // 
             this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manuelToolStripMenuItem,
+            this.algorithmeToolStripMenuItem,
             this.toolStripSeparator5,
             this.àproposdeToolStripMenuItem});
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
@@ -80,19 +82,19 @@
             // manuelToolStripMenuItem
             // 
             this.manuelToolStripMenuItem.Name = "manuelToolStripMenuItem";
-            this.manuelToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.manuelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manuelToolStripMenuItem.Text = "Manuel";
             this.manuelToolStripMenuItem.Click += new System.EventHandler(this.manuelToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // àproposdeToolStripMenuItem
             // 
             this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
-            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.àproposdeToolStripMenuItem.Text = "À &propos de...";
             this.àproposdeToolStripMenuItem.Click += new System.EventHandler(this.àproposdeToolStripMenuItem_Click);
             // 
@@ -349,7 +351,13 @@
             this.label1.Text = "Bienvenue sur l\'application, pour démarrer veuillez sélectionner un type d\'alogri" +
     "thme dans la section \"Algorithmes\"";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // algorithmeToolStripMenuItem
+            // 
+            this.algorithmeToolStripMenuItem.Name = "algorithmeToolStripMenuItem";
+            this.algorithmeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.algorithmeToolStripMenuItem.Text = "Algorithme";
+            this.algorithmeToolStripMenuItem.Click += new System.EventHandler(this.algorithmeToolStripMenuItem_Click);
             // 
             // MainFrm
             // 
@@ -361,7 +369,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFrm";
             this.Text = "Algo Tri";
-            this.Load += new System.EventHandler(this.MainFrm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -406,6 +413,7 @@
         private System.Windows.Forms.ToolStripMenuItem triÀPeigneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem triShellToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem algorithmeToolStripMenuItem;
     }
 }
 

@@ -61,3 +61,7 @@ C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.exe
 C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo-tri.pdb
 C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmTriShell.resources
 C:\Users\UGO_PRSWR\Documents\algo-tri\algo-tri\algo-tri\bin\Debug\MaterialSkin.dll
+C:\Users\ugopr\OneDrive\Bureau\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmTriSelection.resources
+C:\Users\ugopr\OneDrive\Bureau\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmTriShell.resources
+C:\Users\ugopr\OneDrive\Bureau\algo-tri\algo-tri\algo-tri\bin\Debug\MaterialSkin.dll
+C:\Users\ugopr\OneDrive\Bureau\algo-tri\algo-tri\algo-tri\obj\Debug\algo_tri.FrmAide.resources

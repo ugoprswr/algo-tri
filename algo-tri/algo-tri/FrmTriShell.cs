@@ -268,7 +268,7 @@ namespace algo_tri
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnTrierTriInsertion_Click(object sender, EventArgs e)
+        private void btnTrierTriShell_Click(object sender, EventArgs e)
         {
             if (isSorting)
             {

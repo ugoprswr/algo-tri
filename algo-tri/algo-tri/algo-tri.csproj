@@ -62,6 +62,12 @@
     <Compile Include="BaseTriForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmAide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAide.Designer.cs">
+      <DependentUpon>FrmAide.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTriBulle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="Tri.cs" />
     <EmbeddedResource Include="AboutFrm.resx">
       <DependentUpon>AboutFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAide.resx">
+      <DependentUpon>FrmAide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTriBulle.resx">
       <DependentUpon>FrmTriBulle.cs</DependentUpon>
