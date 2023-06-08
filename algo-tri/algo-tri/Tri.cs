@@ -47,19 +47,21 @@ namespace algo_tri
             return (tableau, numberOfSwaps);
         }
 
-       
+
 
         /// <summary>
         /// Méthode de tri par insertion
         /// </summary>
         /// <param name="tableau"></param>
-        public static void TriInsertion(int[] tableau)
+        public static (int[], int) TriInsertion(int[] tableau)
         {
+            int numberOfSwaps = 0;
             int n = tableau.Length;
             for (int i = 1; i < n; i++)
             {
                 int valeurCourante = tableau[i];
                 int j = i - 1;
+                numberOfSwaps++;
                 while (j >= 0 && tableau[j] > valeurCourante)
                 {
                     tableau[j + 1] = tableau[j];
@@ -67,6 +69,7 @@ namespace algo_tri
                 }
                 tableau[j + 1] = valeurCourante;
             }
+            return (tableau, numberOfSwaps);
         }
         /// <summary>
         /// Méthode de Tri Peigne
@@ -132,10 +135,11 @@ namespace algo_tri
         /// Méthode de Tri Shell
         /// </summary>
         /// <param name="tableau"></param>
-        public static int[] TriShell(int[] tableau)
+        public static (int[], int) TriShell(int[] tableau)
         {
             int n = tableau.Length;
             int intervalle = 1;
+            int numberOfSwaps = 0;
 
             while (intervalle < n / 3)
             {
@@ -156,11 +160,12 @@ namespace algo_tri
                     }
 
                     tableau[j] = valeurCourante;
+                    numberOfSwaps++;
                 }
 
                 intervalle = intervalle / 3;
             }
-            return tableau;
+            return (tableau, numberOfSwaps);
         }
         public static int GetDelayFromSpeed(string speed)
         {

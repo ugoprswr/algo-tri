@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbCodeTriBulle = new System.Windows.Forms.TextBox();
+            this.txbCode = new System.Windows.Forms.TextBox();
             this.lblCode = new System.Windows.Forms.Label();
             this.gbTriConfiguration = new System.Windows.Forms.GroupBox();
             this.btnTrierTriBulle = new MaterialSkin.Controls.MaterialButton();
@@ -37,21 +37,22 @@
             this.panelElements = new System.Windows.Forms.Panel();
             this.lblPseudoCode = new System.Windows.Forms.Label();
             this.txbPseudoCode = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCodeEnCours = new System.Windows.Forms.Label();
+            this.txbCodePas = new System.Windows.Forms.TextBox();
             this.gbTriConfiguration.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txbCodeTriBulle
+            // txbCode
             // 
-            this.txbCodeTriBulle.BackColor = System.Drawing.SystemColors.Menu;
-            this.txbCodeTriBulle.Enabled = false;
-            this.txbCodeTriBulle.Location = new System.Drawing.Point(204, 205);
-            this.txbCodeTriBulle.Multiline = true;
-            this.txbCodeTriBulle.Name = "txbCodeTriBulle";
-            this.txbCodeTriBulle.ReadOnly = true;
-            this.txbCodeTriBulle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbCodeTriBulle.Size = new System.Drawing.Size(799, 200);
-            this.txbCodeTriBulle.TabIndex = 1;
+            this.txbCode.BackColor = System.Drawing.SystemColors.Menu;
+            this.txbCode.Enabled = false;
+            this.txbCode.Location = new System.Drawing.Point(204, 205);
+            this.txbCode.Multiline = true;
+            this.txbCode.Name = "txbCode";
+            this.txbCode.ReadOnly = true;
+            this.txbCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbCode.Size = new System.Drawing.Size(799, 200);
+            this.txbCode.TabIndex = 1;
             // 
             // lblCode
             // 
@@ -165,14 +166,24 @@
             this.txbPseudoCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txbPseudoCode.UseSystemPasswordChar = false;
             // 
-            // label1
+            // lblCodeEnCours
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 558);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ligne de code en cours :";
+            this.lblCodeEnCours.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCodeEnCours.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeEnCours.Location = new System.Drawing.Point(201, 558);
+            this.lblCodeEnCours.Name = "lblCodeEnCours";
+            this.lblCodeEnCours.Size = new System.Drawing.Size(194, 22);
+            this.lblCodeEnCours.TabIndex = 0;
+            this.lblCodeEnCours.Text = "Ligne de code en cours :";
+            // 
+            // txbCodePas
+            // 
+            this.txbCodePas.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txbCodePas.Location = new System.Drawing.Point(395, 557);
+            this.txbCodePas.Multiline = true;
+            this.txbCodePas.Name = "txbCodePas";
+            this.txbCodePas.Size = new System.Drawing.Size(228, 23);
+            this.txbCodePas.TabIndex = 9;
             // 
             // FrmTriBulle
             // 
@@ -180,13 +191,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1184, 814);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbCodePas);
+            this.Controls.Add(this.lblCodeEnCours);
             this.Controls.Add(this.txbPseudoCode);
             this.Controls.Add(this.lblPseudoCode);
             this.Controls.Add(this.panelElements);
             this.Controls.Add(this.gbTriConfiguration);
             this.Controls.Add(this.lblCode);
-            this.Controls.Add(this.txbCodeTriBulle);
+            this.Controls.Add(this.txbCode);
             this.Name = "FrmTriBulle";
             this.Text = "FrmTriBulle";
             this.Load += new System.EventHandler(this.FrmTriBulle_Load);
@@ -197,7 +209,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txbCodeTriBulle;
+        private System.Windows.Forms.TextBox txbCode;
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.GroupBox gbTriConfiguration;
         private System.Windows.Forms.ListBox lsbVitesse;
@@ -206,6 +218,7 @@
         private System.Windows.Forms.Label lblPseudoCode;
         private MaterialSkin.Controls.MaterialButton btnTrierTriBulle;
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 txbPseudoCode;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCodeEnCours;
+        private System.Windows.Forms.TextBox txbCodePas;
     }
 }
